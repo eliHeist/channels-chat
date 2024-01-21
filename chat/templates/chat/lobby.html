@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
+    <style>
+        .bubble{
+            background: #053f22;
+            width: fit-content;
+            color: #9ce5c0;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Lets chat!</h1>
@@ -27,7 +35,7 @@
             if (data.type === 'chat') {
                 let messages = document.querySelector('#messages')
                 messages.insertAdjacentHTML('beforeend', `
-                    <div><p>${data.message}</p></div>
+                    <div class="bubble"><p>${data.message}</p></div>
                 `)
             }
         }
